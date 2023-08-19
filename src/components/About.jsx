@@ -24,7 +24,7 @@ const About = () => {
     <Section
       id={"about"}
       className={
-        "text-indigo-500 px-4  min-h-screen flex flex-col justify-center items-center dark:text-indigo-200"
+        "text-indigo-500 px-4  min-h-screen flex flex-col justify-center items-center dark:text-indigo-200 customBreakPoint:scroll-m-10"
       }
     >
       <div className="flex flex-col items-center gap-4">

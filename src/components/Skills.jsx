@@ -63,11 +63,11 @@ const Skills = ({ darkMode }) => {
     <Section
       id={"skills"}
       className={
-        "lg:scroll-mt-20 px-4  min-h-screen flex flex-col gap-4 justify-center items-center"
+        "lg:scroll-mt-20  customBreakPoint:scroll-mt-10 px-4  min-h-screen flex flex-col gap-4 justify-center items-center"
       }
     >
       <SectionHeading ref={textRef} heading={"Skills"} />
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 customBreakPoint:w-2/3 customBreakPoint:mx-auto">
         <SkillLink link={"https://html.spec.whatwg.org/"}>
           <img
             ref={imgRef1}

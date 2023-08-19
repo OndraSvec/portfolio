@@ -39,13 +39,13 @@ const Contact = ({ darkMode }) => {
       <SectionHeading ref={headingRef} heading={"Contact"} />
       <p
         ref={textRef1}
-        className="opacity-0 transition-opacity duration-500 delay-200 w-full max-w-3xl text-center text-indigo-500 text-lg sm:text-xl md:text-2xl lg:text-3xl dark:text-indigo-200"
+        className="opacity-0 transition-opacity duration-500 delay-200 w-full max-w-3xl text-center text-indigo-500 text-lg sm:text-xl md:text-2xl lg:text-3xl dark:text-indigo-200 customBreakPoint:text-2xl"
       >
         Thanks again for taking the time to look at my portfolio. If you liked
         it, let{"'"}s link up! You can find me on Linkedin, see my other
         repositories on Github or maybe send me an email.
       </p>
-      <div className="grid grid-cols-3 mt-10">
+      <div className="grid grid-cols-3 mt-10 customBreakPoint:w-1/2 customBreakPoint:mx-auto">
         <ContactLink link={"https://www.linkedin.com/in/ondrasvecdev/"}>
           <img
             ref={contactRef1}
