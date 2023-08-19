@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -9,6 +10,7 @@ function App() {
     <>
       <Wrapper darkMode={darkMode}>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Home />
       </Wrapper>
     </>
   );
