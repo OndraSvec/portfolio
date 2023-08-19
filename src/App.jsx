@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,6 +18,7 @@ function App() {
         <About />
         <Skills darkMode={darkMode} />
         <Projects darkMode={darkMode} />
+        <Contact darkMode={darkMode} />
       </Wrapper>
     </>
   );
