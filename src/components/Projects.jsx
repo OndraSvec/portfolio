@@ -130,7 +130,7 @@ const Projects = ({ darkMode }) => {
                 combine two of my favourite technologies: React and three.js.
               </p>
               <ProjectLinksContainer>
-                <ProjectLink link={""}>
+                <ProjectLink link={"https://github.com/OndraSvec/3D-portfolio"}>
                   <img
                     ref={projectLinkRef1}
                     className="opacity-0 transition-opacity duration-500 delay-700 ease-in"
@@ -138,7 +138,7 @@ const Projects = ({ darkMode }) => {
                     alt="Github logo."
                   />
                 </ProjectLink>
-                <ProjectLink link={""}>
+                <ProjectLink link={"https://ondrasvec.dev"}>
                   <img
                     ref={projectLinkRef2}
                     className="opacity-0 transition-opacity duration-500 delay-[800ms] ease-in"
