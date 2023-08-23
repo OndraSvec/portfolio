@@ -108,10 +108,16 @@ const Projects = ({ darkMode }) => {
                 Furthermore, the scene responds to user interaction, as it
                 allows visitors to zoom in/out to better focus either on the
                 screen or the entire scene. The same interaction is also used to
-                open the laptop. To avoid conflicts between <em>click</em> and{" "}
-                <em>doubleClick</em> events and allow for a seamless
-                mobile/desktop experience, the app implements a custom{" "}
-                <em>doubleTap</em> event handler.
+                open the laptop. This is achieved by means of the{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://github.com/pmndrs/leva"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  leva
+                </a>{" "}
+                graphical user interface.
               </p>
               <p
                 ref={paraRef4}
