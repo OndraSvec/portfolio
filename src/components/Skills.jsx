@@ -85,9 +85,7 @@ const Skills = ({ darkMode }) => {
           />
         </SkillLink>
         <SkillLink
-          link={
-            "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
-          }
+          link={"https://developer.mozilla.org/en-US/docs/Web/JavaScript"}
         >
           <img
             ref={imgRef3}
