@@ -31,6 +31,10 @@ const Projects = ({ darkMode }) => {
   const paraRef5 = useRef(null);
   const paraRef6 = useRef(null);
   const paraRef7 = useRef(null);
+  const paraRef8 = useRef(null);
+  const paraRef9 = useRef(null);
+  const paraRef10 = useRef(null);
+  const paraRef11 = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -58,6 +62,10 @@ const Projects = ({ darkMode }) => {
       paraRef5,
       paraRef6,
       paraRef7,
+      paraRef8,
+      paraRef9,
+      paraRef10,
+      paraRef11,
     ].forEach((element) => observer.observe(element.current));
   }, []);
   return (
@@ -135,11 +143,29 @@ const Projects = ({ darkMode }) => {
                 , the project allowed me to gain a deeper understanding of and
                 combine two of my favourite technologies: React and three.js.
               </p>
+              <p
+                ref={paraRef5}
+                className="w-full opacity-0 transition-opacity duration-500 delay-700 ease-in"
+              >
+                The main challenge I faced while developing this project was
+                dealing with a scene comprising of more complex models,
+                especially when it comes to uv unwrapping and baking in Blender.
+                I also had to strike a balance between the desired looks and a
+                relatively small file size.
+              </p>
+              <p
+                ref={paraRef6}
+                className="w-full opacity-0 transition-opacity duration-500 delay-[800ms] ease-in"
+              >
+                The solution I came up with was to split the scene into smaller
+                parts, create textures for these parts and then bring them all
+                together when rendering the scene.
+              </p>
               <ProjectLinksContainer>
                 <ProjectLink link={"https://github.com/OndraSvec/3D-portfolio"}>
                   <img
                     ref={projectLinkRef1}
-                    className="opacity-0 transition-opacity duration-500 delay-700 ease-in"
+                    className="opacity-0 transition-opacity duration-500 delay-[900ms] ease-in"
                     src={darkMode ? githubLogo : githubLogoDark}
                     alt="Github logo."
                   />
@@ -147,7 +173,7 @@ const Projects = ({ darkMode }) => {
                 <ProjectLink link={"https://ondrasvec.dev"}>
                   <img
                     ref={projectLinkRef2}
-                    className="opacity-0 transition-opacity duration-500 delay-[800ms] ease-in"
+                    className="opacity-0 transition-opacity duration-500 delay-[1000ms] ease-in"
                     src={darkMode ? chromeLogo : chromeLogoDark}
                     alt="Chrome logo."
                   />
@@ -164,14 +190,14 @@ const Projects = ({ darkMode }) => {
               heading={"Friendstagram"}
             >
               <p
-                ref={paraRef5}
+                ref={paraRef7}
                 className="w-full opacity-0 transition-opacity duration-500 delay-300 ease-in"
               >
                 Friendstagram is a web-based recreation of the popular social
                 media app.
               </p>
               <p
-                ref={paraRef6}
+                ref={paraRef8}
                 className="w-full opacity-0 transition-opacity duration-500 delay-[400ms] ease-in"
               >
                 It is inspired by{" "}
@@ -188,7 +214,7 @@ const Projects = ({ darkMode }) => {
                 had acquired by following the aforementioned course.
               </p>
               <p
-                ref={paraRef7}
+                ref={paraRef9}
                 className="w-full opacity-0 transition-opacity duration-500 delay-500 ease-in"
               >
                 Namely, it allowed me to dive deeper into Typescript and React
@@ -196,13 +222,38 @@ const Projects = ({ darkMode }) => {
                 the aim of assuring data privacy, I practised data structuring
                 and implementing security rules in Firebase.
               </p>
+              <p
+                ref={paraRef10}
+                className="w-full opacity-0 transition-opacity duration-500 delay-[600ms] ease-in"
+              >
+                There were two big challenges I had to cope with while working
+                on this project; keeping chat messages private while
+                communicating certain chat information to the{" "}
+                <em>chat overview</em> page of the app and implementing a custom
+                search function whilst limiting database reads.
+              </p>
+              <p
+                ref={paraRef11}
+                className="w-full opacity-0 transition-opacity duration-500 delay-700 ease-in"
+              >
+                As for chat message privacy, I utilised the
+                collection-item-subcollection pattern with all private data
+                being stored in the subcollection, which can only be read and
+                updated by the users concerned. Regarding the search
+                functionality, the app assigns post-description-derived tags to
+                each post that are then used as keywords to filter through the
+                entire post collection of the app{"'"}s database. To limit
+                database reads, I used the <em>useEffect</em> React hook
+                together with <em>setTimeout</em> to only read the database once
+                the user has stopped typing for half a second.
+              </p>
               <ProjectLinksContainer>
                 <ProjectLink
                   link={"https://github.com/OndraSvec/friendstagram"}
                 >
                   <img
                     ref={projectLinkRef3}
-                    className="opacity-0 transition-opacity duration-500 delay-[600ms] ease-in"
+                    className="opacity-0 transition-opacity duration-500 delay-[800ms] ease-in"
                     src={darkMode ? githubLogo : githubLogoDark}
                     alt="Github logo."
                   />
@@ -210,7 +261,7 @@ const Projects = ({ darkMode }) => {
                 <ProjectLink link={"https://friendstagram-fe98d.web.app/"}>
                   <img
                     ref={projectLinkRef4}
-                    className="opacity-0 transition-opacity duration-500 delay-700 ease-in"
+                    className="opacity-0 transition-opacity duration-500 delay-[900ms] ease-in"
                     src={darkMode ? chromeLogo : chromeLogoDark}
                     alt="Chrome logo."
                   />
