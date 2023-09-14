@@ -8,6 +8,7 @@ import ProjectImgContainer from "./ProjectImgContainer";
 import ProjectImg from "./ProjectImg";
 import portfolio3D from "/assets/portfolio_3D.png";
 import friendstagramImage from "/assets/friendstagram.png";
+import obstacleCourseGame from "/assets/obstacleCourseGame.png";
 import githubLogo from "/logos/light/github.svg";
 import githubLogoDark from "/logos/dark/github_dark.svg";
 import chromeLogo from "/logos/light/chrome.svg";
@@ -18,12 +19,16 @@ const Projects = ({ darkMode }) => {
   const headingRef = useRef(null);
   const projectHeadingRef1 = useRef(null);
   const projectHeadingRef2 = useRef(null);
+  const projectHeadingRef3 = useRef(null);
   const projectImgContainerRef1 = useRef(null);
   const projectImgContainerRef2 = useRef(null);
+  const projectImgContainerRef3 = useRef(null);
   const projectLinkRef1 = useRef(null);
   const projectLinkRef2 = useRef(null);
   const projectLinkRef3 = useRef(null);
   const projectLinkRef4 = useRef(null);
+  const projectLinkRef5 = useRef(null);
+  const projectLinkRef6 = useRef(null);
   const paraRef1 = useRef(null);
   const paraRef2 = useRef(null);
   const paraRef3 = useRef(null);
@@ -35,6 +40,11 @@ const Projects = ({ darkMode }) => {
   const paraRef9 = useRef(null);
   const paraRef10 = useRef(null);
   const paraRef11 = useRef(null);
+  const paraRef12 = useRef(null);
+  const paraRef13 = useRef(null);
+  const paraRef14 = useRef(null);
+  const paraRef15 = useRef(null);
+  const paraRef16 = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -49,12 +59,16 @@ const Projects = ({ darkMode }) => {
       headingRef,
       projectHeadingRef1,
       projectHeadingRef2,
+      projectHeadingRef3,
       projectImgContainerRef1,
       projectImgContainerRef2,
+      projectImgContainerRef3,
       projectLinkRef1,
       projectLinkRef2,
       projectLinkRef3,
       projectLinkRef4,
+      projectLinkRef5,
+      projectLinkRef6,
       paraRef1,
       paraRef2,
       paraRef3,
@@ -66,6 +80,11 @@ const Projects = ({ darkMode }) => {
       paraRef9,
       paraRef10,
       paraRef11,
+      paraRef12,
+      paraRef13,
+      paraRef14,
+      paraRef15,
+      paraRef16,
     ].forEach((element) => observer.observe(element.current));
   }, []);
   return (
@@ -272,6 +291,127 @@ const Projects = ({ darkMode }) => {
               <ProjectImg
                 src={friendstagramImage}
                 alt="Frienstagram app screenshot."
+              />
+            </ProjectImgContainer>
+          </ProjectContainer>
+          <ProjectContainer>
+            <ProjectTextContainer
+              ref={projectHeadingRef3}
+              heading={"Obstacle Course Game"}
+            >
+              <p
+                ref={paraRef12}
+                className="w-full opacity-0 transition-opacity duration-500 delay-300 ease-in"
+              >
+                Drawing inspiration from{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://threejs-journey.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  three.js journey
+                </a>
+                {"'"}s final lesson, this project enhances the user experience
+                by remaking the game landscape, including adding a variety of
+                new obstacles. On top of that, the game increases in difficulty
+                with each completed level and stores the user{"'"}s best score
+                in local storage.
+              </p>
+              <p
+                ref={paraRef13}
+                className="w-full opacity-0 transition-opacity duration-500 delay-[400ms] ease-in"
+              >
+                What{"'"}s more, the project also enables players to pick an
+                animated character instead of the default ball. These not only
+                differ in appearance, but also in other attributes, such as
+                speed offering two different game modes. Aside from that, users
+                can choose whether or not they want to listen to the game{"'"}s
+                background music.
+              </p>
+              <p
+                ref={paraRef14}
+                className="w-full opacity-0 transition-opacity duration-500 delay-500 ease-in"
+              >
+                To offer a slightly more immersive experience, the project gives
+                users the option to toggle fullscreen mode. As far as
+                controlling the characters is concerned, desktop users can take
+                full advantage of their keyboard with mobile users being able to
+                use touch screen.
+              </p>
+              <p
+                ref={paraRef15}
+                className="w-full opacity-0 transition-opacity duration-500 delay-[600ms] ease-in"
+              >
+                As for development tools, the project helped me discover other
+                helpful instruments in building 3D experiences. Namely, the game
+                is built using{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://github.com/pmndrs/react-three-rapier"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  react-three-rapier
+                </a>{" "}
+                to handle game physics,{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://readyplayer.me/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  readyplayer.me
+                </a>{" "}
+                to generate characters, and{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://www.mixamo.com/#/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Mixamo
+                </a>{" "}
+                to animate them.
+              </p>
+              <p
+                ref={paraRef16}
+                className="w-full opacity-0 transition-opacity duration-500 delay-700 ease-in"
+              >
+                While there were no major challenges working on this project, I
+                had to deal with a couple of annoying bugs. The first entailed
+                making sure that hitting spacebar to jump wouldn{"'"}t also
+                trigger one of the previously clicked gameplay buttons. The
+                other one helped me realise the importance of writing as exact
+                conditionals as possible when ensuring that the next level
+                interface would only show up if all three (x, y, z) character
+                coordinates were on the finish platform.
+              </p>
+              <ProjectLinksContainer>
+                <ProjectLink
+                  link={"https://github.com/OndraSvec/obstacle-course-game"}
+                >
+                  <img
+                    ref={projectLinkRef5}
+                    className="opacity-0 transition-opacity duration-500 delay-[900ms] ease-in"
+                    src={darkMode ? githubLogo : githubLogoDark}
+                    alt="Github logo."
+                  />
+                </ProjectLink>
+                <ProjectLink link={"https://obstacle-course-game.vercel.app/"}>
+                  <img
+                    ref={projectLinkRef6}
+                    className="opacity-0 transition-opacity duration-500 delay-[1000ms] ease-in"
+                    src={darkMode ? chromeLogo : chromeLogoDark}
+                    alt="Chrome logo."
+                  />
+                </ProjectLink>
+              </ProjectLinksContainer>
+            </ProjectTextContainer>
+            <ProjectImgContainer ref={projectImgContainerRef3}>
+              <ProjectImg
+                src={obstacleCourseGame}
+                alt="Obstacle Course Game screenshot."
               />
             </ProjectImgContainer>
           </ProjectContainer>
