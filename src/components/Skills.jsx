@@ -3,6 +3,7 @@ import firebaseLogoDark from "/logos/dark/firebase_dark.svg";
 import htmlLogoDark from "/logos/dark/html5_dark.svg";
 import jsLogoDark from "/logos/dark/js_dark.svg";
 import reactLogoDark from "/logos/dark/reactjs_dark.svg";
+import angularLogoDark from "/logos/dark/angular_dark.svg";
 import reactRouterLogoDark from "/logos/dark/react-router_dark.svg";
 import tailwindLogoDark from "/logos/dark/tailwind_dark.svg";
 import typescriptLogoDark from "/logos/dark/typescript_dark.svg";
@@ -13,6 +14,7 @@ import firebaseLogo from "/logos/light/firebase.svg";
 import htmlLogo from "/logos/light/html5.svg";
 import jsLogo from "/logos/light/js.svg";
 import reactLogo from "/logos/light/reactjs.svg";
+import angularLogo from "/logos/light/angular.svg";
 import reactRouterLogo from "/logos/light/react-router.svg";
 import tailwindLogo from "/logos/light/tailwind.svg";
 import typescriptLogo from "/logos/light/typescript.svg";
@@ -35,6 +37,8 @@ const Skills = ({ darkMode }) => {
   const imgRef8 = useRef(null);
   const imgRef9 = useRef(null);
   const imgRef10 = useRef(null);
+  const imgRef11 = useRef(null);
+  const imgRef12 = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -57,6 +61,8 @@ const Skills = ({ darkMode }) => {
       imgRef8,
       imgRef9,
       imgRef10,
+      imgRef11,
+      imgRef12,
     ].forEach((element) => observer.observe(element.current));
   }, []);
   return (
@@ -107,45 +113,61 @@ const Skills = ({ darkMode }) => {
             ref={imgRef5}
             className="opacity-0 transition-opacity duration-500 delay-[600ms]"
             src={darkMode ? reactLogo : reactLogoDark}
-            alt="React library logo."
+            alt="React logo."
+          />
+        </SkillLink>
+        <SkillLink link={"https://angular.dev/"}>
+          <img
+            ref={imgRef6}
+            className="opacity-0 transition-opacity duration-500 delay-700"
+            src={darkMode ? angularLogo : angularLogoDark}
+            alt="Angular framework logo."
+          />
+        </SkillLink>
+        <SkillLink link={"https://reactnative.dev/"}>
+          <img
+            ref={imgRef7}
+            className="opacity-0 transition-opacity duration-500 delay-[800ms]"
+            src={darkMode ? reactLogo : reactLogoDark}
+            alt="React logo."
           />
         </SkillLink>
         <SkillLink link={"https://reactrouter.com/en/main"}>
           <img
-            ref={imgRef6}
-            className="opacity-0 transition-opacity duration-500 delay-700"
+            ref={imgRef8}
+            className="opacity-0 transition-opacity duration-500 delay-[900ms]"
             src={darkMode ? reactRouterLogo : reactRouterLogoDark}
             alt="React Router logo."
           />
         </SkillLink>
         <SkillLink link={"https://tailwindcss.com/"}>
           <img
-            ref={imgRef7}
-            className="opacity-0 transition-opacity duration-500 delay-[800ms]"
+            ref={imgRef9}
+            className="opacity-0 transition-opacity duration-500 delay-1000"
             src={darkMode ? tailwindLogo : tailwindLogoDark}
             alt="Tailwind CSS framework logo."
           />
         </SkillLink>
         <SkillLink link={"https://firebase.google.com/"}>
           <img
-            ref={imgRef8}
-            className="opacity-0 transition-opacity duration-500 delay-[900ms]"
+            ref={imgRef10}
+            className="opacity-0 transition-opacity duration-500 delay-[1100ms]"
             src={darkMode ? firebaseLogo : firebaseLogoDark}
             alt="Firebase app development platform logo."
           />
         </SkillLink>
         <SkillLink link={"https://threejs.org/"}>
           <img
-            ref={imgRef9}
-            className="opacity-0 transition-opacity duration-500 delay-1000"
+            ref={imgRef11}
+            className="opacity-0 transition-opacity duration-500 delay-[1200ms]"
             src={darkMode ? threejsLogo : threejsLogoDark}
             alt="Three.js Javascript 3D library logo."
           />
         </SkillLink>
         <SkillLink link={"https://www.blender.org/"}>
           <img
-            ref={imgRef10}
-            className="opacity-0 transition-opacity duration-500 delay-[1100ms]"
+            ref={imgRef12}
+            className="opacity-0 transition-opacity duration-500 delay-[1300ms]"
             src={darkMode ? blenderLogo : blenderLogoDark}
             alt="Blender 3D creation suite logo."
           />
