@@ -9,6 +9,7 @@ import ProjectImg from "./ProjectImg";
 import portfolio3D from "/assets/portfolio_3D.png";
 import friendstagramImage from "/assets/friendstagram.png";
 import obstacleCourseGame from "/assets/obstacleCourseGame.png";
+import craftsmen from "/assets/craftsmen.png";
 import githubLogo from "/logos/light/github.svg";
 import githubLogoDark from "/logos/dark/github_dark.svg";
 import chromeLogo from "/logos/light/chrome.svg";
@@ -20,15 +21,19 @@ const Projects = ({ darkMode }) => {
   const projectHeadingRef1 = useRef(null);
   const projectHeadingRef2 = useRef(null);
   const projectHeadingRef3 = useRef(null);
+  const projectHeadingRef4 = useRef(null);
   const projectImgContainerRef1 = useRef(null);
   const projectImgContainerRef2 = useRef(null);
   const projectImgContainerRef3 = useRef(null);
+  const projectImgContainerRef4 = useRef(null);
   const projectLinkRef1 = useRef(null);
   const projectLinkRef2 = useRef(null);
   const projectLinkRef3 = useRef(null);
   const projectLinkRef4 = useRef(null);
   const projectLinkRef5 = useRef(null);
   const projectLinkRef6 = useRef(null);
+  const projectLinkRef7 = useRef(null);
+  const projectLinkRef8 = useRef(null);
   const paraRef1 = useRef(null);
   const paraRef2 = useRef(null);
   const paraRef3 = useRef(null);
@@ -45,6 +50,10 @@ const Projects = ({ darkMode }) => {
   const paraRef14 = useRef(null);
   const paraRef15 = useRef(null);
   const paraRef16 = useRef(null);
+  const paraRef17 = useRef(null);
+  const paraRef18 = useRef(null);
+  const paraRef19 = useRef(null);
+  const paraRef20 = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -60,15 +69,19 @@ const Projects = ({ darkMode }) => {
       projectHeadingRef1,
       projectHeadingRef2,
       projectHeadingRef3,
+      projectHeadingRef4,
       projectImgContainerRef1,
       projectImgContainerRef2,
       projectImgContainerRef3,
+      projectImgContainerRef4,
       projectLinkRef1,
       projectLinkRef2,
       projectLinkRef3,
       projectLinkRef4,
       projectLinkRef5,
       projectLinkRef6,
+      projectLinkRef7,
+      projectLinkRef8,
       paraRef1,
       paraRef2,
       paraRef3,
@@ -85,6 +98,10 @@ const Projects = ({ darkMode }) => {
       paraRef14,
       paraRef15,
       paraRef16,
+      paraRef17,
+      paraRef18,
+      paraRef19,
+      paraRef20,
     ].forEach((element) => observer.observe(element.current));
   }, []);
   return (
@@ -413,6 +430,104 @@ const Projects = ({ darkMode }) => {
                 src={obstacleCourseGame}
                 alt="Obstacle Course Game screenshot."
               />
+            </ProjectImgContainer>
+          </ProjectContainer>
+          <ProjectContainer flexRowReversed>
+            <ProjectTextContainer
+              ref={projectHeadingRef4}
+              heading={"Craftsmen App"}
+            >
+              <p
+                ref={paraRef17}
+                className="w-full opacity-0 transition-opacity duration-500 delay-300 ease-in"
+              >
+                Craftsmen is a progressive web application that leverages the{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://ionicframework.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ionic
+                </a>{" "}
+                cross-platform building tool and{" "}
+                <a
+                  className="font-medium text-indigo-700 dark:text-indigo-100 hover:text-indigo-800 cursor-pointer dark:hover:text-indigo-50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-50"
+                  href="https://angular.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Angular
+                </a>
+                {"'"}s v17 features to deliver a user experience resembling that
+                of a platform-specific app. As far as functionality is
+                concerned, the app assumes two types of users: reviewers and
+                craftsmen.
+              </p>
+              <p
+                ref={paraRef18}
+                className="w-full opacity-0 transition-opacity duration-500 delay-[400ms] ease-in"
+              >
+                There are two scenarios in which a new craftsman is added to the
+                home page screen; first, registering as a craftsman. And second,
+                app users are also allowed to review unregistered craftsmen.
+                Such craftsmen{"'"}s reviews are then moved to a new database
+                item when a craftsman with the same name, profession and company
+                registration number is registered.
+              </p>
+              <p
+                ref={paraRef19}
+                className="w-full opacity-0 transition-opacity duration-500 delay-500 ease-in"
+              >
+                As regards reviews displayed on the home page screen, users can
+                filter through them by searching for a specific first or last
+                name or a craftsman{"'"}s company registration number and sort
+                them by their last name or average rating in both ascending and
+                descending order. Furthermore, besides adding a review, users
+                can also click on their own reviews to be redirected to the
+                add/edit review page where they can edit or delete that
+                prefilled review.
+              </p>
+              <p
+                ref={paraRef20}
+                className="w-full opacity-0 transition-opacity duration-500 delay-[600ms] ease-in"
+              >
+                Concerning challenges pertaining to creating this particular
+                application, one of them is already alluded to above; only
+                allowing reviewing registered craftsmen would result in an
+                extremely limited app use case. The solution I came up with is
+                copying over an unregistered craftsman{"'"}s reviews under a new
+                item in the given database collection when a corresponding
+                craftsman is registered. This makes it possible to further scale
+                the app, allowing craftsmen to react to their reviews, for
+                example. This would only necessitate a slight refactor. The
+                second problem I had to deal with was making sure the
+                mobile-first app looked satisfactory even on desktop. This is
+                achieved by leveraging Ionic{"'"}s grid layout to center a
+                max-width restricted div encompassing forms effectively
+                preventing them from stretching along the entire viewport width.
+              </p>
+              <ProjectLinksContainer>
+                <ProjectLink link={"https://github.com/OndraSvec/craftsmen"}>
+                  <img
+                    ref={projectLinkRef7}
+                    className="opacity-0 transition-opacity duration-500 delay-[900ms] ease-in"
+                    src={darkMode ? githubLogo : githubLogoDark}
+                    alt="Github logo."
+                  />
+                </ProjectLink>
+                <ProjectLink link={"https://craftsmen-prod.web.app/home"}>
+                  <img
+                    ref={projectLinkRef8}
+                    className="opacity-0 transition-opacity duration-500 delay-[1000ms] ease-in"
+                    src={darkMode ? chromeLogo : chromeLogoDark}
+                    alt="Chrome logo."
+                  />
+                </ProjectLink>
+              </ProjectLinksContainer>
+            </ProjectTextContainer>
+            <ProjectImgContainer ref={projectImgContainerRef4}>
+              <ProjectImg src={craftsmen} alt="Craftsmen App screenshot." />
             </ProjectImgContainer>
           </ProjectContainer>
         </div>
